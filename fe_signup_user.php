@@ -17,6 +17,9 @@ $telephone=$_POST['phonenumber'];
 $token=generateRandomString();
 $currenttime=time();
 
+$telephone=substr_replace($telephone,substr($telephone,4),3);
+$telephone=substr_replace($telephone,substr($telephone,7),6);
+
 $result=$db->count("user",[
     "telephone"=>$telephone
 ]);
