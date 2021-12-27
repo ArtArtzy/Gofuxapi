@@ -38,7 +38,7 @@ $db->insert("user",[
     "username"=>$username,
     "password"=>$password,
     "telephone"=>$telephone,
-    "status"=>2,
+    "status"=>1,
     "timestamp"=>$currenttime,
     "token"=>$token
 ]);
