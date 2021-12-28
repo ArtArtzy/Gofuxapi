@@ -32,6 +32,10 @@ else{
         "username"=>$username,
         "password"=>$password
     ]);
-    echo $token;
+    $result2=$db->select("user","*",[
+        "username"=>$username
+    ]);
+    
+    echo json_encode($result2, JSON_UNESCAPED_UNICODE);
 }
 ?>
