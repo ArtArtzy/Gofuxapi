@@ -15,8 +15,7 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 
 //
-$username="Artzy";
-$password="1234";
+
 
 $result=$db->count("user",[
     "username"=>$username,
