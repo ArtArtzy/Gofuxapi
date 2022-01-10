@@ -15,8 +15,7 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 
 //
-$username="Artzy";
-$password="1234";
+
 
 $result=$db->count("user",[
     "username"=>$username,
@@ -33,6 +32,10 @@ else{
         "username"=>$username,
         "password"=>$password
     ]);
-    echo $token;
+    $result2=$db->select("user","*",[
+        "username"=>$username
+    ]);
+    
+    echo json_encode($result2, JSON_UNESCAPED_UNICODE);
 }
 ?>
