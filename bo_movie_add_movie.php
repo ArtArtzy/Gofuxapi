@@ -2,8 +2,6 @@
 require_once('connection.php');
 $_POST = json_decode(file_get_contents("php://input"),true);
 $title = $_POST['title'];
-
-
 $catId = $_POST['catId'];
 $jwCode = $_POST['jwCode'];
 $durationHour = $_POST['durationHour'];
